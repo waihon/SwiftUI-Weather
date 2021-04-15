@@ -14,7 +14,7 @@ struct ContentView: View {
                      startPoint: .topLeading,
                      endPoint: .bottomTrailing)
         .edgesIgnoringSafeArea(.all)
-      VStack {
+      VStack(spacing: 10) {
         Text("Cupertino, CA")
           .font(.system(size: 32, weight: .medium, design: .default))
           .foregroundColor(.white)
@@ -30,6 +30,7 @@ struct ContentView: View {
             .font(.system(size: 70, weight: .medium))
             .foregroundColor(.white)
         }
+        .padding(.bottom, 40)
         
         HStack {
           WeatherDayView(dayOfWeek: "TUE",
