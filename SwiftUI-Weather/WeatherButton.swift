@@ -25,7 +25,17 @@ struct WeatherButton: View {
 
 struct WeatherButton_Previews: PreviewProvider {
   static var previews: some View {
-    WeatherButton(title: "Change Day Time",
-                  textColor: .blue,
-                  backgroundColor: .white)  }
+    ZStack {
+      Color(.lightGray)
+        .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+      
+      Button {
+        
+      } label: {
+        WeatherButton(title: "Change Day Time",
+                      textColor: .blue,
+                      backgroundColor: .white)
+      }
+    }
+  }
 }
